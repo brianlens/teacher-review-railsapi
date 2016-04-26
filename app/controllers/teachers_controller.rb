@@ -7,7 +7,6 @@ class TeachersController < ApplicationController
 
   def create
     @teacher = Teacher.new
-
     if @teacher.save
       render json: { teacher:@teacher, location: teacher_url(@teacher)}, status: 201
     else
